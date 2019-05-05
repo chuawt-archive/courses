@@ -4,7 +4,7 @@ Output a sorted list.
 
 Example:
 >>> array = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
->>> print(quicksort(array, 0, len(array) - 1))
+>>> print(quicksort(array))
 [1, 3, 4, 6, 9, 14, 20, 21, 21, 25]
 """
 
@@ -30,7 +30,9 @@ def partition(arr, start, end):
     arr[pivot], arr[wall] = arr[wall], arr[pivot]
     return wall		
 
-def quicksort(arr, start, end):
+def quicksort(arr, start=0, end=None):
+	if end is None:
+		end = len(arr) - 1
 	if start < end:
 		pivot = partition(arr, start, end)
 		# Sort the partions before and after
