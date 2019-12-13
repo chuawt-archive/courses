@@ -6,13 +6,17 @@ def add_punctuation(phrase):
     else:
         return '{}.'.format(phrase_capitalized)
 
-text_list = []
-while True:
-    user_input = input('Say something: ')
-    if user_input == '\end':
-        break
-    else:
-        text_list.append(add_punctuation(user_input))
+def main():
+    text_list = []
+    while True:
+        user_input = input('Say something: ')
+        if user_input == '\end':
+            break
+        else:
+            text_list.append(add_punctuation(user_input))
 
-text = ' '.join(text_list)
-print(text)
+    text = ' '.join(text_list)
+    print(text)
+
+if __name__ == '__main__':
+    main()
