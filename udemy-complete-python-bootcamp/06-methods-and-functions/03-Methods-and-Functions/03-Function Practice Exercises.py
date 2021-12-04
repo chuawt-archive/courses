@@ -219,7 +219,9 @@ def count_primes(num):
     return n_primes
 # %%
 assert count_primes(100) == 25                    
-
+assert count_primes(0) == 0
+assert count_primes(1) == 0
+assert count_primes(2) == 1
 
 # %%
 ## Just for Fun
